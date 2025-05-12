@@ -1,35 +1,20 @@
 package br.com.dio.model;
 
 public class Space {
-
-    private Integer actual;
-    private final int expected;
+    private int actual;
     private final boolean fixed;
 
-
-    public Space(final int expected, final boolean fixed) {
-        this.expected = expected;
+    public Space(int actual, boolean fixed) {
+        this.actual = actual;
         this.fixed = fixed;
-        if (fixed){
-            actual = expected;
-        }
     }
 
-    public Integer getActual() {
+    public int getActual() {
         return actual;
     }
 
-    public void setActual(final Integer actual) {
-        if (fixed) return;
+    public void setActual(int actual) {
         this.actual = actual;
-    }
-
-    public void clearSpace(){
-        setActual(null);
-    }
-
-    public int getExpected() {
-        return expected;
     }
 
     public boolean isFixed() {
